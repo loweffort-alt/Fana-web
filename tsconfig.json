@@ -1,3 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".", // Esto define la base de las rutas
+    "paths": {
+      "@components/*": ["src/components/*"], // Aquí defines tu alias
+      "@utils/*": ["src/utils/*"]
+    }
+  }
 }
+
