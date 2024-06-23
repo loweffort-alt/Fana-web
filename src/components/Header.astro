@@ -1,0 +1,61 @@
+---
+import LogoIcon from "../icons/LogoIcon.astro";
+import ShopCartIcon from "../icons/ShopCartIcon.astro";
+import SearchIcon from "../icons/SearchIcon.astro";
+---
+
+<header class="flex justify-between items-center">
+  <LogoIcon />
+  <ul class="flex gap-5 items-center text-letters text-sm font-bold">
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Home +
+      </a>
+    </li>
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Pages +
+      </a>
+    </li>
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Projects +
+      </a>
+    </li>
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Blog +
+      </a>
+    </li>
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Shop +
+      </a>
+    </li>
+    <li class="group">
+      <a href="#">
+        <span class="text-primary font-extrabold invisible group-hover:visible"
+          >/</span
+        > Contacts +
+      </a>
+    </li>
+  </ul>
+  <div class="flex gap-5 items-center">
+    <!-- <ShopCartIcon /> -->
+    <!-- <SearchIcon /> -->
+    <button
+      class="bg-primary p-4 font-semibold text-white text-base hover:shadow-xl"
+      >Reserva ahora!</button
+    >
+  </div>
+</header>
