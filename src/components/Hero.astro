@@ -1,8 +1,40 @@
 ---
+import { HeroBackground } from "./HeroBackground";
+import HeroContent from "./HeroContent.astro";
+import HeroImage from "./HeroImage.astro";
 ---
 
-<section class="hero">
-  <div class="hero-content">
-  wea
-  </div>
+<section class="grid grid-cols-7 bg-green-200 relative">
+  <!-- <HeroBackground client:load /> -->
+  <HeroContent />
+  <HeroImage />
 </section>
+
+<style is:inline>
+  .text {
+    position: relative;
+    user-select: none;
+    cursor: default;
+  }
+
+  .text .text-bottom {
+    animation: myanim 3.5s 0.5s 1 forwards;
+  }
+
+  @keyframes myanim {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    75% {
+      transform: scale(1.25);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+</style>

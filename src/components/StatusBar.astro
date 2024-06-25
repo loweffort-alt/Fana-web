@@ -4,7 +4,10 @@ import AddressIcon from "../icons/AddressIcon.astro";
 import StatusIcon from "../icons/StatusIcon.astro";
 ---
 
-<div class="flex justify-between text-sm bg-letters text-white p-3">
+<!-- TODO: Hacerlo Responsive -->
+<div
+  class="flex justify-between text-sm bg-black text-white p-3 flex-col sm:flex-row"
+>
   <div class="flex gap-2 items-center">
     <PhoneIcon />
     <span class="mr-2">+51 991027051</span>
@@ -16,3 +19,9 @@ import StatusIcon from "../icons/StatusIcon.astro";
     <StatusIcon />
   </div>
 </div>
+
+<style>
+  span {
+    font-weight: 400;
+  }
+</style>

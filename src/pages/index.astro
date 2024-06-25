@@ -1,15 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "@/components/Hero.astro";
 import MainServices from "../components/MainServices.astro";
 import ExtraServices from "../components/ExtraServices.astro";
 import WhyChooseUs from "../components/WhyChooseUs.astro";
 import OurTeam from "../components/OurTeam.astro";
 import AdvanceServices from "../components/AdvanceServices.astro";
 import Carrousel from "../components/Carrousel.astro";
-import Footer from "../components/Footer.astro";
-import StatusBar from "../components/StatusBar.astro";
+import Footer from "@/components/Footer.astro";
+import StatusBar from "@/components/StatusBar.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -32,6 +32,7 @@ import StatusBar from "../components/StatusBar.astro";
     margin: auto;
     padding: 1rem;
     width: 100%;
+    height: 100%;
     max-width: calc(100% - 2rem);
     color: #333;
     font-size: 20px;
