@@ -4,8 +4,10 @@ import HeroContent from "./HeroContent.astro";
 import HeroImage from "./HeroImage.astro";
 ---
 
-<section class="grid grid-cols-7 bg-green-200 relative">
-  <!-- <HeroBackground client:load /> -->
+<section
+  class="grid h-[590px] grid-cols-7 justify-items-center items-center relative"
+>
+  <HeroBackground client:load />
   <HeroContent />
   <HeroImage />
 </section>

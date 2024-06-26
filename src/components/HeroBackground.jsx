@@ -34,15 +34,15 @@ export function HeroBackground() {
   }, [index]);
 
   return (
-    <div class="absolute z-10 text-center">
+    <div class="absolute z-10 h-full w-full text-center text-neutral-300 text-[4.5rem] lg:text-[13rem]">
       <span className="relative text font-bold">
         <span
-          className={`absolute text-neutral-300 text-[13rem] z-[-1] ${isVisible ? "text-bottom opacity-0" : "invisible"}`}
+          className={`absolute z-[-1] ${isVisible ? "text-bottom opacity-0" : "invisible"}`}
         >
           {text}
         </span>
         <span
-          className={`absolute text-neutral-300 transition-all text-[13rem] duration-1000 ${isVisible ? "opacity-100" : "opacity-0 scale-0"}`}
+          className={` transition-all duration-1000 ${isVisible ? "opacity-100" : "opacity-0 scale-0"}`}
         >
           {text}
         </span>
