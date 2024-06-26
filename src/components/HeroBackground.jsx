@@ -34,7 +34,7 @@ export function HeroBackground() {
   }, [index]);
 
   return (
-    <div class="absolute z-10 h-full w-full text-center text-neutral-300 text-[4.5rem] lg:text-[13rem]">
+    <div className="absolute z-10 h-full w-full text-center text-neutral-300 text-[4.5rem] lg:text-[13rem]">
       <span className="relative text font-bold">
         <span
           className={`absolute z-[-1] ${isVisible ? "text-bottom opacity-0" : "invisible"}`}
