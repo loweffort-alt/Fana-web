@@ -1,7 +1,7 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, m as manifest } from './chunks/_@astrojs-manifest_DF1KieHb.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, m as manifest } from './chunks/_@astrojs-manifest_CPSwNf2k.mjs';
 import { A as AstroError, i as i18nNoLocaleFoundInPath, f as appendForwardSlash, j as joinPaths, R as ResponseSentError, g as MiddlewareNoDataOrNextCalled, h as MiddlewareNotAResponse, G as GetStaticPathsRequired, k as InvalidGetStaticPathsReturn, l as InvalidGetStaticPathsEntry, m as GetStaticPathsExpectedParams, n as GetStaticPathsInvalidRouteParam, t as trimSlashes, P as PageNumberParamNotFound, o as NoMatchingStaticPathFound, p as PrerenderDynamicEndpointPathCollide, q as ReservedSlotName, L as LocalsNotAnObject, r as PrerenderClientAddressNotAvailable, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, s as RewriteWithBodyUsed, u as AstroResponseHeadersReassigned, v as fileExtension, w as slash, x as prependForwardSlash, y as removeTrailingForwardSlash } from './chunks/astro/assets-service_LSOKjKXA.mjs';
-import { R as ROUTE_TYPE_HEADER, a as REROUTE_DIRECTIVE_HEADER, D as DEFAULT_404_COMPONENT, r as renderSlotToString, b as renderJSX, c as chunkToString, i as isRenderInstruction, d as clientLocalsSymbol, e as clientAddressSymbol$1, f as renderPage, g as renderEndpoint, A as ASTRO_VERSION, h as responseSentSymbol$1, j as REROUTABLE_STATUS_CODES } from './chunks/astro/server_B0zU52s8.mjs';
+import { R as ROUTE_TYPE_HEADER, a as REROUTE_DIRECTIVE_HEADER, D as DEFAULT_404_COMPONENT, r as renderSlotToString, b as renderJSX, c as chunkToString, i as isRenderInstruction, d as clientLocalsSymbol, e as clientAddressSymbol$1, f as renderPage, g as renderEndpoint, A as ASTRO_VERSION, h as responseSentSymbol$1, j as REROUTABLE_STATUS_CODES } from './chunks/astro/server_DVVcKq1q.mjs';
 import { serialize, parse } from 'cookie';
 import 'html-escaper';
 import 'clsx';
@@ -472,7 +472,7 @@ const astroCookiesSymbol = Symbol.for("astro.cookies");
 function attachCookiesToResponse(response, cookies) {
   Reflect.set(response, astroCookiesSymbol, cookies);
 }
-function getFromResponse(response) {
+function getCookiesFromResponse(response) {
   let cookies = Reflect.get(response, astroCookiesSymbol);
   if (cookies != null) {
     return cookies;
@@ -481,7 +481,7 @@ function getFromResponse(response) {
   }
 }
 function* getSetCookiesFromResponse(response) {
-  const cookies = getFromResponse(response);
+  const cookies = getCookiesFromResponse(response);
   if (!cookies) {
     return [];
   }
@@ -1246,6 +1246,7 @@ class RenderContext {
     const lastNext = async (ctx, payload) => {
       if (payload) {
         if (this.pipeline.manifest.rewritingEnabled) {
+          pipeline.logger.debug("router", "Called rewriting to:", payload);
           const [routeData, component] = await pipeline.tryRewrite(
             payload,
             this.request,
@@ -1294,7 +1295,7 @@ class RenderContext {
           return new Response(null, { status: 500, headers: { [ROUTE_TYPE_HEADER]: "fallback" } });
         }
       }
-      const responseCookies = getFromResponse(response2);
+      const responseCookies = getCookiesFromResponse(response2);
       if (responseCookies) {
         cookies.merge(responseCookies);
       }
@@ -2428,7 +2429,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "d34b5119-1915-4e1c-b62b-6644cf68ea40",
+    "middlewareSecret": "7981c4fb-3a96-4d89-855b-7e02cc3fdf08",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);
